@@ -1,0 +1,21 @@
+.container {
+    /* Pega 100% do navegador */
+    height: 100vh;
+    max-width: 992px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.container section {
+    flex: 1;
+    display: grid;
+
+    /* Cria duas colunas com 1 fração cada (50% cada) - Tamanho igual pras duas */
+    grid-template-columns: 1fr 1fr;
+    /* Espaçamento entre elas */
+    gap: 6.25rem;
+    align-content: center;
+}
