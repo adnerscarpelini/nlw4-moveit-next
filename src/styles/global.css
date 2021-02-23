@@ -1,3 +1,6 @@
+/* A unidade de medida REM é relativo a fonte do navegador
+Por padrão no desktop é 16 pixels, então 1rem é 16px, 0.5rem é 8px... */
+
 * {
     margin: 0;
     padding: 0;
