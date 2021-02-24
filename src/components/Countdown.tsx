@@ -1,9 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
+import { ChallengesContext } from '../contexts/ChallengesContext';
 import styles from '../styles/components/Countdown.module.css';
 
 let countdownTimeout: NodeJS.Timeout;
 
 export function Countdown() {
+
+    //Instancia o conexto do Challenges pra poder se comunicar  com o componente
+    //Aqui eu passo a função ou variavel que quero usar
+    const { startNewChallenge } = useContext(ChallengesContext);
 
     //Inicia o estado em 25 minutos (1500 segundos)
     //O primeiro parâmetro é a variavel a ser atualizada, e o segundo a função que o atualiza
@@ -50,6 +55,7 @@ export function Countdown() {
         else if (isActive && time === 0) {
             setHasFinished(true);
             setIsActive(false);
+            startNewChallenge();
         }
 
     }, [isActive, time])

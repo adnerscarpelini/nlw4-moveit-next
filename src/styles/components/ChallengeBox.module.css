@@ -1,4 +1,4 @@
-.challangeBoxContainer {
+.challengeBoxContainer {
     height: 100%;
     
     background: var(--white);
@@ -13,19 +13,19 @@
     text-align: center;
 }
 
-.challangeNotActive {
+.challengeNotActive {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.challangeNotActive strong {
+.challengeNotActive strong {
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.4;
 }
 
-.challangeNotActive p {
+.challengeNotActive p {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,18 +35,18 @@
 }
 
 
-.challangeNotActive p img {
+.challengeNotActive p img {
    margin-bottom: 1rem;
 }
 
 
-.challangeActive {
+.challengeActive {
     height: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.challangeActive header {
+.challengeActive header {
     color: var(--blue);
     font-weight: 600;
     font-size: 1.25rem;
@@ -55,7 +55,7 @@
 
 }
 
-.challangeActive main {
+.challengeActive main {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -63,25 +63,25 @@
     justify-content: center;
 }
 
-.challangeActive main strong {
+.challengeActive main strong {
     font-size: 2rem;
     font-weight: 600;
     color: --var(--title);
     margin: 1.5rem;
 }
 
-.challangeActive main p {
+.challengeActive main p {
     line-height: 1.5;
 }
 
-.challangeActive footer {
+.challengeActive footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     /* Distancia entre os botões */
     gap: 1rem;
 }
 
-.challangeActive footer button {
+.challengeActive footer button {
     height: 3rem;
 
     display: flex;
@@ -101,16 +101,16 @@
     transition: filter 0.2s;
 }
 
-.challangeActive footer button.challangeFailedButton {
+.challengeActive footer button.challengeFailedButton {
     background: var(--red);
 }
 
-.challangeActive footer button.challangeSucceededButton {
+.challengeActive footer button.challengeSucceededButton {
     background: var(--green);
 }
 
 
 /* Diminui o brilho no hover */
-.challangeActive footer button:hover{
+.challengeActive footer button:hover{
     filter: brightness(0.9);
 }
