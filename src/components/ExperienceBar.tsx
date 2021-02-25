@@ -4,7 +4,7 @@ import styles from '../styles/components/ExperienceBar.module.css';
 
 export function ExperienceBar() {
 
-    //Instancia o conexto do Challenges pra poder se comunicar  com o componente
+    //Instancia o contexto do Challenges pra poder se comunicar  com o componente
     //Aqui eu passo a função ou variavel que quero usar
     const { currentExperience, experienceToNextLevel } = useContext(ChallengesContext);
 
