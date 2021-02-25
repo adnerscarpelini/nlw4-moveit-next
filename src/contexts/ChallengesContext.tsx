@@ -1,7 +1,7 @@
 //Contextos permitem que um componente converse com o outro
 //É uma ponte entre eles
 
-import { createContext, useState, ReactNode } from 'react';
+import { createContext, useState, ReactNode, useEffect } from 'react';
 import challenges from '../../challenges.json';
 
 interface ChallengesProviderProps {
@@ -49,6 +49,13 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
     //Calculo para ir pro proximo nivel pbaseado em potencia
     const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
 
+    //Criar um efeito colateral quando determinada coisa acontece
+    //Quando o parametro é um array vazio, esse useEffect é executado só uma vez 
+    //quando o componente é iniciado
+    useEffect(() => {
+        //Pedir permissão para mandar notificações
+        Notification.requestPermission();
+    }, [])
 
     function levelUp() {
         setLevel(level + 1);
@@ -60,6 +67,16 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
         const challenge = challenges[randomChallengeIndex];
 
         setAtiveChallenge(challenge);
+
+        //Como está na pasta publica, ele ja entende que é a raiz do projeto
+        new Audio('/notification.mp3').play();
+
+        //Exibir uma notificação
+        if (Notification.permission === 'granted') {
+            new Notification('Novo desafio 🥳', {
+                body: `Valendo ${challenge.amount}xp!!`
+            })
+        }
     }
 
     function resetChallenge() {
