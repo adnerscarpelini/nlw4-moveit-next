@@ -38,7 +38,7 @@ export function CountdownProvider({ children }: CountdownProviderProps) {
 
     //Inicia o estado em 25 minutos (1500 segundos)
     //O primeiro parâmetro é a variavel a ser atualizada, e o segundo a função que o atualiza
-    const [time, setTime] = useState(0.1 * 60);
+    const [time, setTime] = useState(25 * 60);
 
     //Estado para armazenar se o countdown está ativo ou parado
     const [isActive, setIsActive] = useState(false);
@@ -58,7 +58,7 @@ export function CountdownProvider({ children }: CountdownProviderProps) {
     function resetCountdown() {
         clearTimeout(countdownTimeout);
         setIsActive(false);
-        setTime(0.1 * 60);
+        setTime(25 * 60);
         setHasFinished(false);
 
     }

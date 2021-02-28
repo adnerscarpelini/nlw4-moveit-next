@@ -1,0 +1,31 @@
+Anotações:
+
++O que são componentes?
+Resultado de imagem para O que são componentes react
+Componentes permitem você dividir a UI em partes independentes, reutilizáveis, ou seja, trata cada parte da aplicação como um bloco isolado, livre de outras dependências externas.
+
++O que é um estado do componente?
+O estado ( state ) de um componente React tem uma função muito simples e específica. Ele é uma propriedade do componente onde colocamos dados que, quando mudados, devem causar uma nova renderização. 
+
+
++Quais as vantagens do NextJS
+-Um sistema intuitivo baseado em rotas (incluindo suporte a rotas dinâmicas)
+-Otimização automática de páginas estáticas.
+-Renderização de páginas no lado do servidor, analisando e filtrando requisições.
+-Melhoria no carregamento do site.
+-Consegue abrir a pagina inicial mesmo com o javascript desabilitado no navegador, pois ele é umm servidor intermediário
+
++O que são Contextos?
+É a forma de um componente se comunicar com outro.
+É onde fica a regra de negócio de cada componente
+
+
++Para que serve o hook "useEffect"?
+É utilizado para criar um efeito colateral, ou seja, realiza uma ação quando determinado valor é alterado
+
++Diferença entre os tipos de armazenagem de dados no navegador
+-O Local Storage armazena os dados somente em texto, não é possível salvar um objeto, ao menos se converte-lo em texto
+-O Session Storage mante os dados apenas enquanto o navegador está aberto
+-O IndexedDB é o mais completo
+-O Web SQL é semelhante ao SQLite, porém não está disponível em todos navegadores
+-Os Cookies é a formma mais antigo, e trabalha de formma semelhante ao Local Storage. Nele você tem mais configurações como domínios, data de expiração, prioridade e permimtir apenas em Https.
